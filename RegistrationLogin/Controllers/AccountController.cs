@@ -10,13 +10,7 @@ namespace RegistrationLogin.Controllers
     public class AccountController : Controller
     {
         // GET: Account
-        public ActionResult Index()
-        {
-            using (UserDBContext db = new UserDBContext())
-            {
-                return View(db.userAccount.ToList());
-            }
-        }
+        
 
         public ActionResult Register()
         {
