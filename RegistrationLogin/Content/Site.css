@@ -1,0 +1,109 @@
+﻿body {
+    background-color: #222;
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-size: 100% 110%;
+}
+h2, h3, h4, h5, h6, a {
+    margin:0; padding:0;
+}
+.logo {
+    color: #ffffff;
+    text-align: center;
+}
+.login {
+    margin:0 auto;
+    max-width:500px;
+}
+.login-header {
+    color:#fff;
+    text-align:center;
+    font-size:300%;
+    
+}
+
+.login-form {
+    border-radius:10px;
+    background-color: #ffffff
+}
+.login-form h3 {
+    text-align:left;
+    margin-left:40px;
+    color:#222;
+}
+.login-form {
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 5% auto;
+    text-align: center;
+}
+.login input[type="text"],
+.login input[type="password"] {
+    max-width: 400px;
+    width: 80%;
+    line-height: 3em;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 1em 2em;
+    border-radius: 5px;
+    border: 2px solid #cccccc;
+    outline: none;
+    padding-left: 10px;
+}
+.login-form input[type="button"] {
+    background: #446CB3;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+}
+.login-form input[type="submit"] {
+    background: #446CB3;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+}
+.button {
+    margin: 10px;
+}
+.text-danger {
+    color: red;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.table-head {
+    height: 60px;
+    background: #36304a;
+    color: white;
+}
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 530px){
+    .login-form h3 {
+        text-align:center;
+        margin:0;
+    }
+    .login-button {
+        margin-bottom:10px;
+    }
+    .login-form input[type="button"] {
+        font-size: 15px;
+        padding: 7.5px;
+    }
+    .login-form input[type="submit"] {
+        font-size: 15px;
+        padding: 7.5px;
+    }
+
+}
+

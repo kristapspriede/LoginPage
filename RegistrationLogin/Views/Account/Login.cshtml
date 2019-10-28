@@ -1,0 +1,49 @@
+﻿@model RegistrationLogin.Models.UserAccount
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="login">
+        <div class="login-header">
+            <h1>ALTO ERP</h1>
+        </div>
+        <div class="login-form">
+        <div>
+            <h3>@Html.LabelFor(model => model.UserName)</h3>
+            <div>
+                @Html.EditorFor(model => model.UserName)
+                @Html.ValidationMessageFor(model => model.UserName, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+            <div>
+                <h3>@Html.LabelFor(model => model.Password)</h3>
+                <div>
+                    @Html.EditorFor(model => model.Password)
+                    @Html.ValidationMessageFor(model => model.Password, "", new {@class = "text-danger"})
+                </div>
+            </div>
+            <div>
+                @Html.ValidationMessage("")
+            </div>
+            <div class="button">
+                <input type="submit" value="Login"/>
+            </div>
+            <div class="button">
+                <input type="button" value="Create Account" onclick="location.href = '@Url.Action("Register", "Account")'"/>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
