@@ -50,6 +50,7 @@ h2, h3, h4, h5, h6, a {
     outline: none;
     padding-left: 10px;
 }
+
 .login-form input[type="button"] {
     background: #446CB3;
     border: 1px solid #f2f2f2;
@@ -61,6 +62,19 @@ h2, h3, h4, h5, h6, a {
     cursor: pointer;
     font-size: 20px;
     padding: 10px;
+}
+.login input[type="button"] {
+    background: #446CB3;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
 }
 .login-form input[type="submit"] {
     background: #446CB3;
@@ -85,6 +99,18 @@ h2, h3, h4, h5, h6, a {
     height: 60px;
     background: #36304a;
     color: white;
+}
+.login-button {
+    background: #446CB3;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
 }
 
 /*Media Querie*/

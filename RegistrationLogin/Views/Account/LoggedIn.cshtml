@@ -1,11 +1,15 @@
 ﻿
 @{
     ViewBag.Title = "LoggedIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @if (Session["UserID"] != null)
 {
-    <h1 style="color: white;">Welcome, @Session["UserName"].ToString(), you are logged in</h1>
+    <div class="login">
+            <h1 style="color: white;">Welcome, @Session["UserName"].ToString(), you are logged in!</h1>
+            <input class="login-button" type="button" value="Logout" onclick="location.href = '@Url.Action("LogOff", "Account")'" />
+    </div>
 }
 
 

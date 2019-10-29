@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using RegistrationLogin.Models;
 
 namespace RegistrationLogin.Controllers
@@ -27,9 +28,12 @@ namespace RegistrationLogin.Controllers
                     db.userAccount.Add(account);
                     db.SaveChanges();
                 }
+                
                 ModelState.Clear();
                 ViewBag.Message = "Registration successful! Please Login!";
-                return RedirectToAction("LoggedIn");
+                Session["UserID"] = account.UserID.ToString();
+                Session["UserName"] = account.UserName;
+                return RedirectToAction("CompletedRegistration");
             }
 
             return View();
@@ -74,5 +78,26 @@ namespace RegistrationLogin.Controllers
                 return RedirectToAction("Login");
             }
         }
+
+        
+
+        public ActionResult CompletedRegistration()
+        {
+            if (Session["UserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+        }
+        public ActionResult LogOff()
+        {
+            Session.Clear();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "Account");
+        }
+
     }
 }

@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Registration successful";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="login">
+        <h1 style="color: white;">Your registration was successful!</h1>
+        <input class="login-button" type="button" value="Login" onclick="location.href = '@Url.Action("Login", "Account")'"/>
+</div>
